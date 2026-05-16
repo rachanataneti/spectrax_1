@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { LayoutDashboard, Play, Pause, CheckCircle2, AlertTriangle } from 'lucide-react';
 import { Replay3DModel } from './Replay3DModel';
 import { sessionRecorder } from '../services/sessionRecorder';
-import { useTheme } from '../context/ThemeContext';
 
 interface ReplayScreenProps {
   onBack: () => void;
@@ -14,7 +13,6 @@ interface ReplayScreenProps {
 }
 
 export const ReplayScreen: React.FC<ReplayScreenProps> = ({ onBack, stats }) => {
-  const { theme } = useTheme();
   const frames = (sessionRecorder as any).frames || [];
   const [currentFrameIdx, setCurrentFrameIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -59,7 +57,7 @@ export const ReplayScreen: React.FC<ReplayScreenProps> = ({ onBack, stats }) => 
   return (
     <div style={{
       width: '100vw', height: '100vh',
-      background: theme === 'dark' ? '#000' : '#e8efff',
+      background: 'var(--bg-primary)',
       position: 'relative',
       overflow: 'hidden',
       fontFamily: "'Rajdhani', 'Orbitron', 'Inter', sans-serif",

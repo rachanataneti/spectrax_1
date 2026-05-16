@@ -72,29 +72,8 @@ function App() {
     <main className="spectrax-app">
       <button
         onClick={toggleTheme}
+        className="theme-toggle"
         aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-        style={{
-          position: 'fixed',
-          top: '16px',
-          right: '16px',
-          zIndex: 9999,
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          padding: '8px 16px',
-          fontFamily: 'var(--font-heading)',
-          fontSize: '0.7rem',
-          fontWeight: 700,
-          letterSpacing: '1.5px',
-          textTransform: 'uppercase',
-          color: 'var(--neon-cyan)',
-          background: 'var(--glass-bg)',
-          border: '1px solid var(--glass-border)',
-          borderRadius: '999px',
-          backdropFilter: 'blur(12px)',
-          cursor: 'pointer',
-          boxShadow: 'var(--glass-shadow)',
-        }}
       >
         {theme === 'dark' ? '☀ Light' : '☾ Dark'}
       </button>

@@ -1,5 +1,5 @@
-declare const Pose: any;
-type Results = any;
+import { Pose, Results } from '@mediapipe/pose';
+
 
 /**
  * poseService.ts (Updated for Stability)
