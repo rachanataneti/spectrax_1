@@ -130,7 +130,7 @@ export const WorkoutScreen: React.FC<WorkoutScreenProps> = ({ exercise, onEnd, o
         if (ctx) overlayRenderer.setContext(ctx);
 
         sessionRecorder.start();
-
+        await clipEngine.init();
         await cameraService.startCamera(videoRef.current);
 
         poseService.onResults(async (results) => {
