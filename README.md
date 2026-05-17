@@ -110,8 +110,16 @@ SpectraX is a **GSSoC 2026** project and we welcome contributors of all levels!
 1. Read our **[CONTRIBUTING.md](CONTRIBUTING.md)** for the rules of engagement.
 2. Check the **[Issues](https://github.com/Somil450/spectrax_1/issues)** for `level1`, `level2`, or `level3` tasks.
 3. Use the **[GSSoC Task Request Template](.github/ISSUE_TEMPLATE/gssoc_task.yml)** when proposing changes.
-
 ---
+
+## ✨ Contributors 
+Thanks to all amazing contributors
+<!--ALL-CONTRIBUTORS-LIST:START-->
+<!--ALL-CONTRIBUTORS-LIST-END-->
+This project follows the
+[all-contributors](https://allcontributors.org)specifications 
+
+
 
 ## 📄 License
 
