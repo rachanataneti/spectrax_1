@@ -11,6 +11,9 @@ jobs:
   all-contributors:
     runs-on: ubuntu-latest
     steps:
-      - uses: all-contributors/all-contributors-action@v0.1.0
+      - name: checkout repository 
+        uses: actions/checkout@v4
+      - name: Run All Contributors
+        uses: all-contributors/all-contributors-action@v0.1.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
