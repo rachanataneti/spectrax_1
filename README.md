@@ -114,10 +114,10 @@ SpectraX is a **GSSoC 2026** project and we welcome contributors of all levels!
 
 ## ✨ Contributors 
 Thanks to all amazing contributors
-<!--ALL-CONTRIBUTORS-LIST:START-->
-<!--ALL-CONTRIBUTORS-LIST-END-->
+<!-- ALL-CONTRIBUTORS-LIST:START -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 This project follows the
-[all-contributors](https://allcontributors.org)specifications 
+[all-contributors](https://allcontributors.org) specifications 
 
 
 
