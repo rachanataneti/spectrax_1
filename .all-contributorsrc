@@ -1,0 +1,13 @@
+Json
+{
+"projectName": "spectrax_1",
+"projectOwner: "Somil45",
+"files": ["README.md"],
+"imageSize": 100,
+"contributionPerLine": 7,
+"contributors": [],
+"commit": true,
+"commitConvention": "angular"
+}
+
+
