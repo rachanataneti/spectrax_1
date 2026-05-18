@@ -128,7 +128,7 @@ Thanks to all amazing contributors
 </table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 This project follows the
-[all-contributors](https://allcontributors.org) specifications 
+[all-contributors](https://allcontributors.org) specifications
 
 ## 📄 License
 
