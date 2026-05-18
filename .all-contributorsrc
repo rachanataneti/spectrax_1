@@ -1,21 +1,10 @@
 {
 "projectName": "spectrax_1",
-"projectOwner": "Somil45",
+"projectOwner": "Somil450",
 "files": ["README.md"],
 "imageSize": 100,
 "contributorsPerLine": 7,
-"contributors": [
-  {
-     "login": "rachanataneti",
-     "name": "Rachana",
-     " avatar_url": "https://github.com/rachanataneti.png",
-     "profile": "https://github.com/rachanataneti",
-     "contributors": ["code"]
-
-}
-],
-"commit": true,
-"commitConvention": "angular"
+"contributors": []
 }
 
 
