@@ -130,8 +130,6 @@ Thanks to all amazing contributors
 This project follows the
 [all-contributors](https://allcontributors.org) specifications 
 
-
-
 ## 📄 License
 
 This project is licensed under the **MIT License**.
