@@ -6,7 +6,7 @@ on:
      types: [created] 
    workflow_dispatch:
    issues:
-     tyoes: [opened]
+     types: [opened]
 permissions:
    contents: write
    issues: write 
@@ -19,6 +19,6 @@ jobs:
       - name: checkout repository 
         uses: actions/checkout@v4
       - name: Run All Contributors
-        uses: all-contributors/all-contributors-action@v0.1.0
+        uses: all-contributors/all-contributors-action@latest
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
