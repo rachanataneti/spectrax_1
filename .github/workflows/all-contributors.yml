@@ -15,26 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository 
-        uses: actions/checkout@v4
-      
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Runs All Contributers Bot
+        uses: wow-actions/all-contributors-action@v1
         with:
-          node-version: 20
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+      
+      
            
-      - name: Instal CLI  
-        run: npm install -g all-contributors-cli
-        
-      - name: all contributors
-        run: all-contributors add rachanataneti code
-        
-      - name: Generate READMe
-        run: all-contributors generate
-      - name: commit changes 
-        run: |
-           git config --global user.name "github-action[bot]"
-           git config --global user.email " github-action[bot]"@user.noreply.github.com"
-           git add .
-           git commit -m "docs: update contributors" || echo "No Changes"
-           git push
