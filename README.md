@@ -115,20 +115,9 @@ SpectraX is a **GSSoC 2026** project and we welcome contributors of all levels!
 ## ✨ Contributors 
 Thanks to all amazing contributors
 <!-- ALL-CONTRIBUTORS-LIST:START -->
-<table> 
-  <tr>
-     <td align="center">
-       <a href="https://github.com/rachanataneti">
-        <img src="https://github.com/rachanataneti.png" width="100px;" alt="Rachana"/><br />
-        <sub><b>Rachana</b></sub>
-       </a><br />
-        💻
-     </td>
-  </tr>
-</table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 This project follows the
-[all-contributors](https://allcontributors.org) specifications
+[All-contributors](https://allcontributors.org) specifications
 
 ## 📄 License
 
