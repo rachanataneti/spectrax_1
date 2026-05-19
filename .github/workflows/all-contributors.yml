@@ -1,5 +1,4 @@
-#refresh trigger fix
-#trigger workflow refresh 
+
 name: "All Contributors"
 on:
    issue_comment:
@@ -14,8 +13,7 @@ jobs:
   all-contributors:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repository 
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Run All Contributors
         uses: t4t5/all-contributors-action@v1
         with:
