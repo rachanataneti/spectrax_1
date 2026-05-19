@@ -146,8 +146,7 @@ Thanks to all amazing contributors 💙
 <!-- ALL-CONTRIBUTORS-LIST:START -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the
-[All Contributors](https://allcontributors.org) specification.
+This project follows the All Contributors specification.
 
 ## 📄 License
 
