@@ -7,9 +7,11 @@ const Pose = (window as any).Pose as typeof PoseType;
 
 
 /**
- * poseService.ts (Updated for Stability)
- * Wraps MediaPipe Pose for high-performance body tracking.
- * Uses robust CDN loading and frame guards to prevent WASM and asset errors.
+ * poseService
+ *
+ * Wrapper around Mediapipe pose for real-time body tracking.
+ * Handles initinalization , frame processing , error recovery, and cleanup.
+ * Uses CDN-loaded Mediapipe model to avoid vite building issue. 
  */
 
 export class PoseService {
@@ -17,10 +19,19 @@ export class PoseService {
   private isLoaded: boolean = false;
   private inProgress: boolean = false;
   private errorCount: number = 0;
-
+  /**
+   *Initializes poseService and automatically sets up Mefia pipe pise instance.
+   *Calls init() internally to configure model and options.
+   */
+  
   constructor() {
     this.init();
   }
+  /**
+  * Initializes MediaPipe Pose instance using CDN-hosted assets.
+  * Configures Model settings like detection confidence and smoothing.
+  * Ensure safe setup with error handling for browser-based execuation.
+  */
 
   private init() {
     if (this.pose) return;
@@ -49,7 +60,9 @@ export class PoseService {
   }
 
   /**
-   * Sets the callback function when pose results are available.
+   * Registera callback to receive pose detection results.
+   * 
+   * @param callback - function triggered whenever Mediapipe returns pose landmarks.
    */
   onResults(callback: (results: Results) => void) {
     if (!this.pose) return;
@@ -64,7 +77,12 @@ export class PoseService {
   }
 
   /**
-   * Processes a single frame.
+   * Send a video/image frame to Mediapipe for pose detection.
+   *
+   * Prevents overlapping processing using inProograss flag.
+   * includes error recovery logic for repeated failures.
+   *
+   * @param image - video , canvas,or image frame to analyze. 
    */
   async send(image: HTMLVideoElement | HTMLCanvasElement | HTMLImageElement) {
     if (!this.pose || !this.isLoaded || this.inProgress) return;
@@ -88,7 +106,8 @@ export class PoseService {
   }
 
   /**
-   * Cleans up the Pose instance.
+   * safely closes MediaPipe pose instance and frees resources.
+   * reset internal state to allow re-initialization if needed.
    */
   async close() {
     if (this.pose) {
