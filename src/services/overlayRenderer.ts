@@ -7,9 +7,10 @@ const drawLandmarks = (window as any).drawLandmarks;
 
 
 /**
- * overlayRenderer.ts (Updated for Multi-Exercise)
- * High-performance canvas drawing with dynamic joint color-coding.
- * Highlights primary movement joints in Green/Yellow/Red.
+ * overlayRenderer 
+ * Responsible for drawing real-time MediaPipe pose skeleton on canvas.
+ * Provides visual feedback for fitness tracking with dynamic hightlighting.
+ * Status-based coloring, and scanning animation effects.
  */
 
 export class OverlayRenderer {
@@ -17,9 +18,19 @@ export class OverlayRenderer {
   private scanY: number = 0;
   private scanDirection: number = 1;
 
+  /** 
+  * Sets the canvas rendering context used for drawing pose overlay.
+  * 
+  * @param ctx - 2D rendering context from HTML canves.
+  */
+  
   setContext(ctx: CanvasRenderingContext2D) {
     this.ctx = ctx;
   }
+  
+  /**
+  * Clear the entire canvas before rendering a new frame.
+  */
 
   clear() {
     if (!this.ctx) return;
@@ -27,7 +38,10 @@ export class OverlayRenderer {
   }
 
   /**
-   * Returns a neon color based on tracking status.
+   * Returns neno color based on exercises performance status.
+   *
+   * @param status - current movement quality (green/yellow/red).
+   * @return HEX color string for rendering.
    */
   private getStatusColor(status: 'green' | 'yellow' | 'red') {
     switch (status) {
@@ -39,10 +53,17 @@ export class OverlayRenderer {
   }
 
   /**
-   * Draws the pose skeleton with dynamic highlights.
-   * @param results MediaPipe Pose results.
-   * @param status Overall exercise status.
-   * @param primaryJoints Landmarks relevant to the current exercise.
+    * Render pose skeleton overlay on canvas using MediaPipe results
+    * 
+    * Highlights :
+    * - Full body skeleton connections
+    * - Primary exercise joints
+    * - Performance - based color coding
+    * - Scanning animation effects 
+    *
+    * @param results - MediaPipe Pose detection results 
+    * @param status - Exercise quality indicatoer(green/yellow/red)
+    * @param primaryJoints - key joints relevant to current exercise 
    */
   draw(results: Results, status: 'green' | 'yellow' | 'red' = 'green', primaryJoints: number[] = []) {
     if (!this.ctx || !results.poseLandmarks) return;
@@ -83,6 +104,10 @@ export class OverlayRenderer {
     this.ctx.shadowBlur = 15;
     this.ctx.shadowColor = glow;
   }
+  /**
+  * Draws animated scanning line across canvas for visual feedback.
+  * creats motion effects to indicate live tracking.
+  */
 
   private drawScanningLine() {
     if (!this.ctx) return;
